@@ -1,0 +1,14 @@
+[Unit]
+Description=IntelliJ IDEA License Server
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=ltpc
+ExecStart=/usr/bin/IntelliJIDEALicenseServer_linux_amd64
+
+[Install]
+WantedBy=multi-user.target
